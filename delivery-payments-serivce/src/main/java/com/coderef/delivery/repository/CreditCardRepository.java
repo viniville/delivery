@@ -1,10 +1,13 @@
 package com.coderef.delivery.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import java.util.Date;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.coderef.delivery.model.CreditCard;
-import com.coderef.delivery.model.Payment;
 
-public interface CreditCardRepository extends CrudRepository<CreditCard, Integer> {
+public interface CreditCardRepository extends JpaRepository<CreditCard, Integer> {
+	
+	CreditCard findByNumberIgnoreCaseAndExpiration(String number, Date expiration);
 
 }

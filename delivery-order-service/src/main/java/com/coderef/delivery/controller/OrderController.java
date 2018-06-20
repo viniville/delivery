@@ -15,7 +15,8 @@ public class OrderController {
     private OrderService orderService;
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Order> save(@RequestBody  Order order){
+    public ResponseEntity<Order> add(@RequestBody  Order order){
+    	order.setId(null);
         return ResponseEntity.ok(orderService.save(order));
     }
 

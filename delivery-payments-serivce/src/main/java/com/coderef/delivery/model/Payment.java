@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -31,8 +30,8 @@ public class Payment implements Serializable{
 	@NotNull(message = "Value is required")
 	private Double value;
 
-	@JoinColumn(name = "creditcard_id")
 	@ManyToOne
+	@JoinColumn(name = "creditcard_id", nullable = false)
 	private CreditCard creditCard;
 
 	public Integer getId() {
@@ -51,6 +50,14 @@ public class Payment implements Serializable{
 		this.status = status;
 	}
 
+	public Double getValue() {
+		return value;
+	}
+
+	public void setValue(Double value) {
+		this.value = value;
+	}
+
 	public CreditCard getCreditCard() {
 		return creditCard;
 	}
@@ -58,4 +65,5 @@ public class Payment implements Serializable{
 	public void setCreditCard(CreditCard creditCard) {
 		this.creditCard = creditCard;
 	}
+	
 }

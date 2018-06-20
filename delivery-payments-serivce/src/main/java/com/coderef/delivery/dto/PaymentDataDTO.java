@@ -2,23 +2,22 @@ package com.coderef.delivery.dto;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class PaymentDataDTO {
 
-	private String holder;
-
+	@NotEmpty
 	private String number;
 
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@NotNull
 	private Date expiration;
 
+	@NotNull
 	private Double paidValue;
-
-	public String getHolder() {
-		return holder;
-	}
-
-	public void setHolder(String holder) {
-		this.holder = holder;
-	}
 
 	public String getNumber() {
 		return number;

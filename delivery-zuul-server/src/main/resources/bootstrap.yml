@@ -1,0 +1,12 @@
+debug: true
+
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: delivery-zuul-server
+  cloud:
+    config:
+      uri: http://localhost:9090

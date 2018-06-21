@@ -20,7 +20,7 @@ import com.coderef.delivery.service.CreditCardService;
 import com.coderef.delivery.service.PaymentService;
 
 @RestController
-@RequestMapping(value = "/api/payments", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/payments", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PaymentController {
 	
 	@Autowired

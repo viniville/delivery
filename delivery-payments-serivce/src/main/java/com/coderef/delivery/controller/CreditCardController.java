@@ -14,7 +14,7 @@ import com.coderef.delivery.model.CreditCard;
 import com.coderef.delivery.service.CreditCardService;
 
 @RestController
-@RequestMapping(value = "/api/creditcards", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/creditcards", produces = MediaType.APPLICATION_JSON_VALUE)
 public class CreditCardController {
 
 	@Autowired

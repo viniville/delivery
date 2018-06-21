@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/orders", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/orders", produces = MediaType.APPLICATION_JSON_VALUE)
 public class OrderController {
 
     @Autowired

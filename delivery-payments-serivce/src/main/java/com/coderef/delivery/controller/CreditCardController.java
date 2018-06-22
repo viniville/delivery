@@ -36,5 +36,4 @@ public class CreditCardController {
         return ResponseEntity.ok().body(creditCardService.findAll());
     }
     
-
 }
